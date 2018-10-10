@@ -1,5 +1,46 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+$body-bg: #e1cdb5;
+$hr-border-color: #b0906a;
+$navbar-dark-color: #d5a132;
+$navbar-padding-y: ($spacer / 10);
+$navbar-brand-font-size: 2rem;
+
+// remove blue outline around hamburger icon
+.navbar-custom .navbar-toggler {
+    outline: 0;
+}
+
+/* change logo color and font */
+.navbar-custom a.navbar-brand {
+    color: $navbar-dark-color;
+    font-family: 'Marck Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* change the background color */
+.navbar-custom {
+    background-color: #23100c;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: $navbar-dark-color;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: $navbar-dark-color;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: $body-bg;
+}
 
 @import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/transitions";
