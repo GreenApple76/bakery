@@ -40,6 +40,19 @@ $navbar-brand-font-size: 2rem;
     color: $body-bg;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    height: 100%;
+    background-image: url("../img/ales-krivec-623956-unsplash.jpg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/navbar";
 @import "../node_modules/bootstrap/scss/utilities";
