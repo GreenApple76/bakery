@@ -78,8 +78,8 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(255, 255, 255, 0.1))), url("../img/ales-krivec-623956-unsplash.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.1)), url("../img/ales-krivec-623956-unsplash.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#23100c), to(rgba(255, 255, 255, 0.1))), url("../img/ales-krivec-623956-unsplash.jpg");
+  background-image: linear-gradient(#23100c, rgba(255, 255, 255, 0.1)), url("../img/ales-krivec-623956-unsplash.jpg");
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
