@@ -82,10 +82,10 @@ h1 {
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 2rem;
 }
 
 .hero .btn-primary {
+  margin-top: 1.25rem;
   color: #d5a132 !important;
   color: #fff;
   background-color: #23100c;
