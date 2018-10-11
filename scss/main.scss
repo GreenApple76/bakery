@@ -1,7 +1,7 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
-@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Open+Sans|Raleway');
 
 $body-bg: #e1cdb5;
 $hr-border-color: #b0906a;
@@ -45,7 +45,29 @@ html, body {
     height: 100%;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    color: $body-bg;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-shadow: 4px 4px 15px #23100c;
+    line-height: 3rem;
+    padding: 2rem;
+
+    @media (min-width: 768px) {
+        font-size: 8rem;
+        line-height: 8rem;
+    }
+}
+
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     background-image: url("../img/ales-krivec-623956-unsplash.jpg");
     background-position: center right;
