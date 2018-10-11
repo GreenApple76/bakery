@@ -1,0 +1,54 @@
+// remove blue outline around hamburger icon
+.navbar-custom .navbar-toggler {
+    outline: 0;
+}
+
+/* change logo color and font */
+.navbar-custom a.navbar-brand {
+    color: $navbar-dark-color;
+    font-family: 'Marck Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* change the background color */
+.navbar-custom {
+    background-color: #23100c;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: $navbar-dark-color;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: $navbar-dark-color;
+}
+
+/* change the color of active or hovered links */
+.navbar {
+    .navbar-brand {
+        &:hover, &:focus {
+            color: $body-bg !important; 
+        }
+    }
+
+    .navbar-text {
+        a {
+            color: $body-bg;
+            &:hover, &:focus {
+                color: $body-bg; 
+            }
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            &:not(.disabled) {
+                &:hover, &:focus {
+                    color: $body-bg; 
+                }
+            }
+        }
+    }
+}
