@@ -51,6 +51,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+section {
+  padding-top: 2rem;
+}
+
 h1 {
   color: #e1cdb5;
   font-family: 'Raleway', sans-serif;
@@ -122,6 +126,17 @@ h1 {
 .show > .hero .btn-primary.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(7, 3, 2, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(7, 3, 2, 0.5);
+}
+
+@media (min-width: 768px) {
+  figure {
+    float: right;
+    padding-left: 2rem;
+  }
+}
+
+#about img {
+  max-width: 90%;
 }
 
 *,

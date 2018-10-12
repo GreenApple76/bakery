@@ -15,6 +15,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+section {
+    padding-top: 2rem;
+}
+
 h1 {
     color: $body-bg;
     font-family: 'Raleway', sans-serif;
@@ -47,6 +51,18 @@ h1 {
         @include button-variant($primary, darken($primary, 7.5%), darken($primary, 10%), lighten($primary,5%), lighten($primary, 10%), darken($primary,30%));
     }
 }
+
+figure {
+    @media (min-width: 768px) {
+        float: right;
+        padding-left: 2rem;
+    }
+}
+
+#about img {
+    max-width: 90%;
+}
+
 
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/grid";
