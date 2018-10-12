@@ -16,7 +16,8 @@ body {
 }
 
 section {
-    padding-top: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 h1 {
@@ -62,7 +63,6 @@ figure {
 #about img {
     max-width: 90%;
 }
-
 
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/grid";
