@@ -1,6 +1,7 @@
 $primary: #23100c;
 $body-bg: #e1cdb5;
-$hr-border-color: #b0906a;
+$bg-brown: #b0906a;
+$hr-border-color: $bg-brown;
 
 $navbar-dark-color: #d5a132;
 $navbar-padding-y: ($spacer / 10);

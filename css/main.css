@@ -137,7 +137,46 @@ h1 {
 }
 
 #about img {
-  max-width: 90%;
+  max-width: 100%;
+  border: 2px solid #d5a132;
+  -webkit-box-shadow: 2px 2px 10px #23100c;
+          box-shadow: 2px 2px 10px #23100c;
+}
+
+.bg-brown {
+  background-color: #b0906a;
+}
+
+#menu img {
+  border: 2px solid #d5a132;
+  -webkit-box-shadow: 2px 2px 10px #23100c;
+          box-shadow: 2px 2px 10px #23100c;
+}
+
+ul.leaders {
+  max-width: 31.25em;
+  padding: 0;
+  padding-top: 0.75rem;
+  overflow-x: hidden;
+  list-style: none;
+}
+
+ul.leaders li:before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . ";
+}
+
+ul.leaders span:first-child {
+  padding-right: 0.33em;
+  background-color: #b0906a;
+}
+
+ul.leaders span + span {
+  float: right;
+  padding-left: 0.33em;
+  background-color: #b0906a;
 }
 
 *,
@@ -5652,5 +5691,33 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: #6c757d;
 }
 /*# sourceMappingURL=main.css.map */
