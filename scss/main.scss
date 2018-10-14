@@ -141,6 +141,40 @@ ul.leaders {
     height: 50px;
 }
 
+#contact h2 {
+    color: $rust;
+    margin-bottom: 1.5rem;
+}
+
+input[type=text], 
+textarea {
+    background-color: $body-bg !important;
+    border: 0 !important;
+    outline: none;
+}
+
+input[type=text]:focus, 
+textarea:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="submit"] { 
+    color: $gold;
+    background-color: $rust;
+    outline: none;
+}
+
+#contact .btn-primary {
+    margin-top: 1.25rem;
+    color: $gold !important;
+    @include button-variant($primary, darken($primary, 7.5%), darken($primary, 10%), lighten($primary,5%), lighten($primary, 10%), darken($primary,30%));
+}
+
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/navbar";
@@ -148,3 +182,4 @@ ul.leaders {
 @import "../node_modules/bootstrap/scss/transitions";
 @import "../node_modules/bootstrap/scss/buttons";
 @import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/forms";
