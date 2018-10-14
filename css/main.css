@@ -17,6 +17,14 @@ section {
   background-color: #b0906a;
 }
 
+.bg-darkbrown {
+  background-color: #23100c;
+}
+
+footer {
+  color: #b0906a;
+}
+
 .navbar-custom .navbar-toggler {
   outline: 0;
 }
