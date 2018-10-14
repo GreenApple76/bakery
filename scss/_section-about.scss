@@ -1,0 +1,16 @@
+figure {
+    @media (min-width: 768px) {
+        float: right;
+        padding-left: 2rem;
+    }
+}
+
+#about h2 {
+    color: $rust;
+}
+
+#about img {
+    max-width: 100%;
+    border: 2px solid $gold;
+    box-shadow: 2px 2px 10px $darkbrown; 
+}

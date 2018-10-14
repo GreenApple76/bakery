@@ -1,0 +1,39 @@
+#menu h2 {
+    color: $rust;
+    margin-bottom: 1.5rem;
+}
+
+#menu img {
+    border: 2px solid $gold;
+    box-shadow: 2px 2px 10px $darkbrown; 
+}
+
+ul.leaders {
+    max-width: 31.25em;
+    padding: 0;
+    padding-top: 0.75rem;
+    overflow-x: hidden;
+    list-style: none;
+    
+    li:before {
+        float: left;
+        width: 0;
+        white-space: nowrap;
+        content:
+        ". . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . "
+    }
+    
+    span:first-child {
+        padding-right: 0.33em;
+        background-color: #b0906a;
+    }
+    
+    span + span {
+        float: right;
+        padding-left: 0.33em;
+        background-color: #b0906a;
+    }
+}

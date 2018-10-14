@@ -1,0 +1,32 @@
+h1 {
+    color: $body-bg;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-shadow: 4px 4px 15px $darkbrown; 
+    letter-spacing: 0.25rem;
+    line-height: 3rem;
+
+    @media (min-width: 768px) {
+        font-size: 8rem;
+        line-height: 8rem;
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    // background-image: linear-gradient(rgba(0,0,0,0.7),rgba(255,255,255,0.1)), url("../img/ales-krivec-623956-unsplash.jpg");
+    background-image: linear-gradient(rgba(35,16,12,1),rgba(255,255,255,0.1)), url("../img/ales-krivec-623956-unsplash.jpg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .btn-primary {
+        margin-top: 1.25rem;
+        color: $gold !important;
+        @include button-variant($primary, darken($primary, 7.5%), darken($primary, 10%), lighten($primary,5%), lighten($primary, 10%), darken($primary,30%));
+    }
+}

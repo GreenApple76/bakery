@@ -1,180 +1,22 @@
+// following 3 imports required by bootstrap
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+
+// google fonts
 @import url('https://fonts.googleapis.com/css?family=Marck+Script|Open+Sans|Raleway');
 
+// main website partials
 @import "variables";
+@import "miscellaneous";
 @import "navbar";
+@import "section-hero";
+@import "section-about";
+@import "section-menu";
+@import "section-locations";
+@import "section-contact";
 
-html, body {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-h1 {
-    color: $body-bg;
-    font-family: 'Raleway', sans-serif;
-    font-size: 3rem;
-    font-weight: bolder;
-    text-shadow: 4px 4px 15px #23100c;
-    letter-spacing: 0.25rem;
-    line-height: 3rem;
-
-    @media (min-width: 768px) {
-        font-size: 8rem;
-        line-height: 8rem;
-    }
-}
-
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    // background-image: linear-gradient(rgba(0,0,0,0.7),rgba(255,255,255,0.1)), url("../img/ales-krivec-623956-unsplash.jpg");
-    background-image: linear-gradient(rgba(35,16,12,1),rgba(255,255,255,0.1)), url("../img/ales-krivec-623956-unsplash.jpg");
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    .btn-primary {
-        margin-top: 1.25rem;
-        color: $gold !important;
-        @include button-variant($primary, darken($primary, 7.5%), darken($primary, 10%), lighten($primary,5%), lighten($primary, 10%), darken($primary,30%));
-    }
-}
-
-figure {
-    @media (min-width: 768px) {
-        float: right;
-        padding-left: 2rem;
-    }
-}
-
-#about h2 {
-    color: $rust;
-}
-
-#about img {
-    max-width: 100%;
-    border: 2px solid $gold;
-    box-shadow: 2px 2px 10px #23100c;
-}
-
-.bg-brown {
-    background-color: $bg-brown;
-}
-
-#menu h2 {
-    color: $rust;
-    margin-bottom: 1.5rem;
-}
-
-#menu img {
-    border: 2px solid $gold;
-    box-shadow: 2px 2px 10px #23100c;
-}
-
-ul.leaders {
-    max-width: 31.25em;
-    padding: 0;
-    padding-top: 0.75rem;
-    overflow-x: hidden;
-    list-style: none;
-    
-    li:before {
-        float: left;
-        width: 0;
-        white-space: nowrap;
-        content:
-        ". . . . . . . . . . . . . . . . . . . . "
-        ". . . . . . . . . . . . . . . . . . . . "
-        ". . . . . . . . . . . . . . . . . . . . "
-        ". . . . . . . . . . . . . . . . . . . . "
-    }
-    
-    span:first-child {
-        padding-right: 0.33em;
-        background-color: #b0906a;
-    }
-    
-    span + span {
-        float: right;
-        padding-left: 0.33em;
-        background-color: #b0906a;
-    }
-}
-
-#locations h2 {
-    color: $rust;
-    margin-bottom: 1.5rem;
-}
-
-.location-icon {
-    background-image: url(../img/noun_Store_1362649.svg);
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    padding-left: 60px;
-}
-
-.hours-icon {
-    background-image: url(../img/noun_clock_1990361.svg);
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    padding-left: 60px;
-}
-
-.phone-icon {
-    background-image: url(../img/noun_Phone_1986302.svg);
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    padding-left: 60px;
-    height: 50px;
-}
-
-#contact h2 {
-    color: $rust;
-    margin-bottom: 1.5rem;
-}
-
-input[type=text], 
-textarea {
-    background-color: $body-bg !important;
-    border: 0 !important;
-    outline: none;
-}
-
-input[type=text]:focus, 
-textarea:focus {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-}
-
-textarea {
-    resize: none;
-}
-
-input[type="submit"] { 
-    color: $gold;
-    background-color: $rust;
-    outline: none;
-}
-
-#contact .btn-primary {
-    margin-top: 1.25rem;
-    color: $gold !important;
-    @include button-variant($primary, darken($primary, 7.5%), darken($primary, 10%), lighten($primary,5%), lighten($primary, 10%), darken($primary,30%));
-}
-
+// additional bootstrap support partials
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/navbar";
