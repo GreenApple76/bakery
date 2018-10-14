@@ -48,7 +48,7 @@ h1 {
 
     .btn-primary {
         margin-top: 1.25rem;
-        color: $navbar-dark-color !important;
+        color: $gold !important;
         @include button-variant($primary, darken($primary, 7.5%), darken($primary, 10%), lighten($primary,5%), lighten($primary, 10%), darken($primary,30%));
     }
 }
@@ -60,9 +60,13 @@ figure {
     }
 }
 
+#about h2 {
+    color: $rust;
+}
+
 #about img {
     max-width: 100%;
-    border: 2px solid $navbar-dark-color;
+    border: 2px solid $gold;
     box-shadow: 2px 2px 10px #23100c;
 }
 
@@ -71,11 +75,12 @@ figure {
 }
 
 #menu h2 {
+    color: $rust;
     margin-bottom: 1.5rem;
 }
 
 #menu img {
-    border: 2px solid $navbar-dark-color;
+    border: 2px solid $gold;
     box-shadow: 2px 2px 10px #23100c;
 }
 
@@ -110,6 +115,7 @@ ul.leaders {
 }
 
 #locations h2 {
+    color: $rust;
     margin-bottom: 1.5rem;
 }
 

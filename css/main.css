@@ -136,6 +136,10 @@ h1 {
   }
 }
 
+#about h2 {
+  color: #973803;
+}
+
 #about img {
   max-width: 100%;
   border: 2px solid #d5a132;
@@ -148,6 +152,7 @@ h1 {
 }
 
 #menu h2 {
+  color: #973803;
   margin-bottom: 1.5rem;
 }
 
@@ -184,6 +189,7 @@ ul.leaders span + span {
 }
 
 #locations h2 {
+  color: #973803;
   margin-bottom: 1.5rem;
 }
 
