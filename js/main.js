@@ -15,27 +15,53 @@ $(document).on('click', '.btn-cart', function() {
     var name = $btn.data('name');
     var price = $btn.data('price');
     var quantity = $btn.data('quantity');
-
-    products.push({id: id,
-                   name: name,
-                   price: price,
-                   quantity: quantity});
-
+    var productFound = false; // use to determine if newly added product already
+                              // exists in the cart
+    
     var productListing = '<p id="' + id + '"><button class="btn btn-sm btn-danger btn-delete" data-id="' + id + '">x</button> &nbsp; <input class="quantity" type="number" value="1" name=' + id + '> ' + name + ' $' + price +
                           ' = $<span>' + price * 1 + '</span></p>';
-
     subtotal += price;
 
-    // overwrite cart contents if no other items in the cart
-    if (items === 0) {
-        $('.cart').html(productListing);
-        $('.checkout').html('<button type="submit" class="btn btn-primary">Checkout</button>');
-        $('.cart-subtotal').text('Subtotal: $'+subtotal.toFixed(2));
-    } else {
-        $('.cart').append(productListing);
+    // avoid creating duplicate entries within the cart
+    for (var i=0; i < products.length; i++) {
+        console.log('prod id', products[i].id, 'id', id);
+        if (products[i].id === id) {
+            productFound = true;
+            console.log ('product found');
+            products[i].quantity = Number(products[i].quantity) + Number(quantity);
+            // refresh quantity textbox with latest quantity
+            $('#'+products[i].id+'>input').attr('value', products[i].quantity);
+            updateProductQuantity(id, products[i].quantity, calcTotals);
+            break;
+        }
     }
 
-    items++;
+    if (productFound) {
+        productFound = false;
+    // product does not exist in cart - so add it
+    } else {
+        products.push({id: id,
+            name: name,
+            price: price,
+            quantity: quantity});
+
+        // overwrite cart contents if no other items in the cart
+        if (items === 0) {
+            $('.cart').html(productListing);
+            $('.checkout').html('<button type="submit" class="btn btn-primary">Checkout</button>');
+            $('.cart-subtotal').text('Subtotal: $'+subtotal.toFixed(2));
+        } else {
+            $('.cart').append(productListing);
+            // update with new subtotal
+            calcTotals();
+        }
+
+        items++;
+    }
+    
+    
+
+    
 });
 
 // event handler: when user clicks delete item button from cart
@@ -49,6 +75,9 @@ $(document).on('click', '.btn-delete', function() {
     products = products.filter(function(obj) {
         return obj.id != id;
     });
+
+    // update cart subtotal
+    calcTotals();
 
     // update cart status to empty if there are no more items in the cart
     // reset subtotal and remove subtotal from page
