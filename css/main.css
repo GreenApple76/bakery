@@ -257,7 +257,10 @@ ul.leaders span + span {
 }
 
 #cart .btn-delete {
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 12px;
 }
 
 .checkout .btn-primary {

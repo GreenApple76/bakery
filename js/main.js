@@ -56,6 +56,11 @@ $(document).on('change', '.quantity', function() {
     var $input = $(this);
     var id = $input[0].name;
     var quantity = $input[0].valueAsNumber;
+    // disallow negative quantities from being calculated
+    if (quantity < 0) {
+        quantity = 0;
+        $input.val(0);
+    }
     updateProductQuantity(id, quantity, calcTotals);
 });
 
