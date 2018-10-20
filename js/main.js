@@ -24,10 +24,8 @@ $(document).on('click', '.btn-cart', function() {
 
     // avoid creating duplicate entries within the cart
     for (var i=0; i < products.length; i++) {
-        console.log('prod id', products[i].id, 'id', id);
         if (products[i].id === id) {
             productFound = true;
-            console.log ('product found');
             products[i].quantity = Number(products[i].quantity) + Number(quantity);
             // refresh quantity textbox with latest quantity
             $('#'+products[i].id+'>input').attr('value', products[i].quantity);
@@ -104,17 +102,13 @@ $(document).on('change', '.quantity', function() {
 function updateProductQuantity (id, quantity, callback) {
     var result = $.grep(products, function(obj) { return obj.id == id});
     result[0].quantity = quantity;
-    console.log('obj quantity updated to', result[0].quantity);
     callback();
 }
 
 function calcTotals () {
-    console.log('products', products);
     subtotal = 0;
     $.each(products, function(index, obj) {
-        console.log(obj.name);
         var lineItemTotal = (obj.price * obj.quantity).toFixed(2);
-        console.log(obj.name + '....' + lineItemTotal);
         subtotal += parseFloat(lineItemTotal);
         $('#'+obj.id+'>span').text(lineItemTotal);
     });
