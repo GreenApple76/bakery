@@ -2,3 +2,14 @@
     color: $rust;
     margin-bottom: 1.5rem;
 }
+
+#cart input[type=number]{
+    background-color: $body-bg;
+    outline: none;
+    text-align: center;
+    width: 3rem;
+} 
+
+#cart .btn-delete {
+    border-radius: 50%;
+}

@@ -249,6 +249,17 @@ ul.leaders span + span {
   margin-bottom: 1.5rem;
 }
 
+#cart input[type=number] {
+  background-color: #e1cdb5;
+  outline: none;
+  text-align: center;
+  width: 3rem;
+}
+
+#cart .btn-delete {
+  border-radius: 50%;
+}
+
 #locations h2 {
   color: #973803;
   margin-bottom: 1.5rem;
