@@ -5,7 +5,19 @@
 
 #menu img {
     border: 2px solid $gold;
-    box-shadow: 2px 2px 10px $darkbrown; 
+    box-shadow: 2px 2px 10px $darkbrown;
+    margin-bottom: 1rem;
+}
+
+#menu .btn-primary {
+    margin-top: 1.25rem;
+    color: $gold !important;
+    @include button-variant($primary, darken($primary, 7.5%), darken($primary, 10%), lighten($primary,5%), lighten($primary, 10%), darken($primary,30%));
+}
+
+#menu .btn-cart {
+    margin-left: 0.75rem;
+    margin-top: -0.5rem;
 }
 
 ul.leaders {
@@ -14,7 +26,11 @@ ul.leaders {
     padding-top: 0.75rem;
     overflow-x: hidden;
     list-style: none;
-    
+
+    li {
+        height: 5.5rem;
+    }
+
     li:before {
         float: left;
         width: 0;

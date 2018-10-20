@@ -28,6 +28,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link cart-icon" href="#cart"><img class="cart-icon" src="img/cart.png" alt="Shopping Cart"></a>
                 </ul>
             </div>
     </nav>
@@ -68,49 +70,139 @@
                     <section id="menu">
                         <h2>Our Menu</h2>
                         <div class="row">
-                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-5 mb-lg-5">
+                            <div class="col-12 col-md-6 mb-3 mb-md-5">
                                 <img class="img-fluid" src="img/baked-bakery-blur-209403.jpg" alt="A Variety of Baked Breads">
                                 <ul class="leaders">
-                                    <li><span>Rye bread</span><span>$2.75</span></li>
-                                    <li><span>Wheat bread</span><span>$3.29</span></li>
-                                    <li><span>French bread</span><span>$3.89</span></li>
-                                    <li><span>Cuban bread</span><span>$3.99</span></li>
+                                    <li><span>Rye bread</span><span>$2.75<button class="btn btn-primary btn-cart" 
+                                        data-id="1" 
+                                        data-name="Rye bread"  
+                                        data-price="2.75" 
+                                        data-quantity="1" 
+                                        data-image="img/baked-bakery-blur-209403.jpg">
+                                        Add to Cart
+                                        </button></span></li>
+                                    <li><span>Wheat bread</span><span>$3.29<button class="btn btn-primary btn-cart" 
+                                        data-id="2" 
+                                        data-name="Wheat bread"  
+                                        data-price="3.29" 
+                                        data-quantity="1" 
+                                        data-image="img/baked-bakery-blur-209403.jpg">
+                                        Add to Cart
+                                        </button></span></li>
+                                    <li><span>French bread</span><span>$3.89<button class="btn btn-primary btn-cart" 
+                                        data-id="3" 
+                                        data-name="French bread"  
+                                        data-price="3.89" 
+                                        data-quantity="1" 
+                                        data-image="img/baked-bakery-blur-209403.jpg">
+                                        Add to Cart
+                                        </button></span></li>
+                                    <li><span>Cuban bread</span><span>$3.99<button class="btn btn-primary btn-cart" 
+                                        data-id="4" 
+                                        data-name="Cuban bread"  
+                                        data-price="3.99" 
+                                        data-quantity="1" 
+                                        data-image="img/baked-bakery-blur-209403.jpg">
+                                        Add to Cart
+                                        </button></span></li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-5 mb-lg-5">
+                            <div class="col-12 col-md-6 mb-3 mb-md-5">
                                 <img class="img-fluid" src="img/biscuits-cookies-dessert-33330.jpg" alt="Freshly baked sugar cookies">
                                 <ul class="leaders">
-                                    <li><span>Sugar cookies</span><span>$5/dz</span></li>
-                                    <li><span>Oatmeal-raisen cookies</span><span>$5/dz</span></li>
-                                    <li><span>Chocolate chip cookies</span><span>$5/dz</span></li>
+                                    <li><span>Sugar cookies</span><span>$0.50<button class="btn btn-primary btn-cart" 
+                                        data-id="5" 
+                                        data-name="Sugar cookie"  
+                                        data-price="0.50" 
+                                        data-quantity="1" 
+                                        data-image="img/biscuits-cookies-dessert-33330.jpg"> 
+                                        Add to Cart
+                                        </button></span></li>
+                                    <li><span>Oatmeal-raisen cookies</span><span>$0.50<button class="btn btn-primary btn-cart" 
+                                        data-id="6" 
+                                        data-name="Oatmeal-raisen cookie"  
+                                        data-price="0.50" 
+                                        data-quantity="1" 
+                                        data-image="img/biscuits-cookies-dessert-33330.jpg">
+                                        Add to Cart
+                                        </button></span></li>
+                                    <li><span>Chocolate chip cookies</span><span>$0.50<button class="btn btn-primary btn-cart" 
+                                        data-id="7" 
+                                        data-name="Chocolate chip cookie"  
+                                        data-price="0.50" 
+                                        data-quantity="1" 
+                                        data-image="img/biscuits-cookies-dessert-33330.jpg">
+                                        Add to Cart
+                                        </button></span></li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-5 mb-lg-5">
+                            <div class="col-12 col-md-6 mb-3 mb-md-5">
                                 <img class="img-fluid" src="img/bake-baked-bakery-1028704.jpg" alt="Cupcakes">
                                 <ul class="leaders">
-                                    <li><span>Gourmet cupcakes</span><span>$2.95ea</span></li>
+                                    <li><span>Gourmet cupcake</span><span>$2.95<button class="btn btn-primary btn-cart" 
+                                        data-id="8" 
+                                        data-name="Gourmet cupcake"  
+                                        data-price="2.95" 
+                                        data-quantity="1" 
+                                        data-image="img/bake-baked-bakery-1028704.jpg">
+                                        Add to Cart
+                                        </button></span></li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-5 mb-lg-5">
+                            <div class="col-12 col-md-6 mb-3 mb-md-5">
                                 <img class="img-fluid" src="img/birthday-birthday-cake-cake-140831.jpg" alt="Cakes">
                                 <ul class="leaders">
-                                    <li><span>Birthday cakes</span><span>$12.95ea</span></li>
+                                    <li><span>8-in birthday cake</span><span>$12.95<button class="btn btn-primary btn-cart" 
+                                        data-id="9" 
+                                        data-name="8-inch birthday cake"
+                                        data-price="12.95" 
+                                        data-quantity="1" 
+                                        data-image="img/birthday-birthday-cake-cake-140831.jpg">
+                                        Add to Cart
+                                        </button></span></li>
+                                        <li><span>10-in birthday cake</span><span>$17.95<button class="btn btn-primary btn-cart" 
+                                            data-id="12" 
+                                            data-name="10-inch birthday cake"
+                                            data-price="17.95" 
+                                            data-quantity="1" 
+                                            data-image="img/birthday-birthday-cake-cake-140831.jpg">
+                                            Add to Cart
+                                        </button></span></li>
                                     <li><span>Wedding cakes</span><span>Call for quote</span></li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-5 mb-lg-5">
+                            <div class="col-12 col-md-6 mb-3 mb-md-5">
                                 <img class="img-fluid" src="img/baked-goods-bread-bright-1191639.jpg" alt="Doughnuts">
                                 <ul class="leaders">
-                                    <li><span>Doughnuts</span><span>$7.50/dz</span></li>
+                                    <li><span>Doughnuts</span><span>$0.75<button class="btn btn-primary btn-cart" 
+                                        data-id="10" 
+                                        data-name="Doughnut"
+                                        data-price="0.75" 
+                                        data-quantity="1" 
+                                        data-image="img/baked-goods-bread-bright-1191639.jpg">
+                                        Add to Cart
+                                        </button></span></li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-5 mb-lg-5">
+                            <div class="col-12 col-md-6 mb-3 mb-md-5">
                                 <img class="img-fluid" src="img/bakery-baking-bread-267308.jpg" alt="Cinnamon sweet rolls">
                                 <ul class="leaders">
-                                    <li><span>Cinnamon sweet rolls</span><span>$2.69ea</span></li>
+                                    <li><span>Cinnamon sweet roll</span><span>$2.69<button class="btn btn-primary btn-cart" 
+                                        data-id="11" 
+                                        data-name="Cinnamon sweet roll"
+                                        data-price="2.69" 
+                                        data-quantity="1" 
+                                        data-image="img/bakery-baking-bread-267308.jpg">
+                                        Add to Cart
+                                        </button></span></li>
                                 </ul>
                             </div>
                         </div><!-- row -->
+                    </section>
+                    <section id="cart">
+                            <div class="row">
+                            <div class="col-12 mb-3"><div><h2>Shopping Cart</h2><p>Your shopping cart is currently empty.</p></div></div>
+                            </div>
                     </section>
                 </div><!-- col-12 -->
             </div><!-- row -->
