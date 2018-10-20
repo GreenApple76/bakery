@@ -45,9 +45,17 @@ $(document).on('click', '.btn-delete', function() {
     $('#'+id).remove();
     items--;
 
+    // remove item from products array
+    products = products.filter(function(obj) {
+        return obj.id != id;
+    });
+
     // update cart status to empty if there are no more items in the cart
+    // reset subtotal and remove subtotal from page
     if (items === 0) {
         $('.cart').html('<p>Your shopping cart is currently empty.</p>');
+        $('.cart-subtotal').text('');
+        subtotal = 0;
     }
 });
 
