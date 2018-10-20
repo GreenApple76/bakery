@@ -13,3 +13,11 @@
 #cart .btn-delete {
     border-radius: 50%;
 }
+
+.checkout .btn-primary {
+    margin-top: 1.25rem;
+    color: $gold !important;
+    @include button-variant($primary, darken($primary, 7.5%), darken($primary, 10%), lighten($primary,5%), lighten($primary, 10%), darken($primary,30%));
+    outline: 0 !important;
+    border: 0 !important;
+}

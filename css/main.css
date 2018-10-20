@@ -260,6 +260,46 @@ ul.leaders span + span {
   border-radius: 50%;
 }
 
+.checkout .btn-primary {
+  margin-top: 1.25rem;
+  color: #d5a132 !important;
+  color: #fff;
+  background-color: #23100c;
+  border-color: #070302;
+  outline: 0 !important;
+  border: 0 !important;
+}
+
+.checkout .btn-primary:hover {
+  color: #fff;
+  background-color: black;
+  border-color: #361913;
+}
+
+.checkout .btn-primary:focus, .checkout .btn-primary.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(7, 3, 2, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(7, 3, 2, 0.5);
+}
+
+.checkout .btn-primary.disabled, .checkout .btn-primary:disabled {
+  color: #fff;
+  background-color: #23100c;
+  border-color: #070302;
+}
+
+.checkout .btn-primary:not(:disabled):not(.disabled):active, .checkout .btn-primary:not(:disabled):not(.disabled).active,
+.show > .checkout .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #492119;
+  border-color: black;
+}
+
+.checkout .btn-primary:not(:disabled):not(.disabled):active:focus, .checkout .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .checkout .btn-primary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(7, 3, 2, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(7, 3, 2, 0.5);
+}
+
 #locations h2 {
   color: #973803;
   margin-bottom: 1.5rem;

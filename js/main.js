@@ -22,17 +22,20 @@ $(document).on('click', '.btn-cart', function() {
                    quantity: quantity});
 
     var productListing = '<p id="' + id + '"><button class="btn btn-sm btn-danger btn-delete" data-id="' + id + '">x</button> &nbsp; <input class="quantity" type="number" value="1" name=' + id + '> ' + name + ' $' + price +
-                          ' = $' + price * 1 + '</p>';
+                          ' = $<span>' + price * 1 + '</span></p>';
+
+    subtotal += price;
 
     // overwrite cart contents if no other items in the cart
     if (items === 0) {
         $('.cart').html(productListing);
+        $('.checkout').html('<button type="submit" class="btn btn-primary">Checkout</button>');
+        $('.cart-subtotal').text('Subtotal: $'+subtotal.toFixed(2));
     } else {
         $('.cart').append(productListing);
     }
 
     items++;
-    subtotal += price;
 });
 
 // event handler: when user clicks delete item button from cart
@@ -53,13 +56,26 @@ $(document).on('change', '.quantity', function() {
     var $input = $(this);
     var id = $input[0].name;
     var quantity = $input[0].valueAsNumber;
-    updateProductQuantity(id, quantity);
+    updateProductQuantity(id, quantity, calcTotals);
 });
 
-function updateProductQuantity (id, quantity) {
+function updateProductQuantity (id, quantity, callback) {
     var result = $.grep(products, function(obj) { return obj.id == id});
     result[0].quantity = quantity;
     console.log('obj quantity updated to', result[0].quantity);
-};
+    callback();
+}
 
+function calcTotals () {
+    console.log('products', products);
+    subtotal = 0;
+    $.each(products, function(index, obj) {
+        console.log(obj.name);
+        var lineItemTotal = (obj.price * obj.quantity).toFixed(2);
+        console.log(obj.name + '....' + lineItemTotal);
+        subtotal += parseFloat(lineItemTotal);
+        $('#'+obj.id+'>span').text(lineItemTotal);
+    });
+    $('.cart-subtotal').text('Subtotal: $'+subtotal.toFixed(2));
+}
 });
