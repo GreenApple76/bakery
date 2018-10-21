@@ -47,9 +47,8 @@ $(document).on('click', '.btn-cart', function() {
         // overwrite cart contents if no other items in the cart
         if (items === 0) {
             $('.cart').html(productListing);
-            $('.notify-badge').text(1);
             $('.checkout').html('<button type="submit" class="btn btn-primary">Checkout</button>');
-            $('.cart-subtotal').text('Subtotal: $'+subtotal.toFixed(2));
+            calcTotals();
         } else {
             $('.cart').append(productListing);
             // update with new subtotal
