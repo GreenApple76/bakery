@@ -6,6 +6,7 @@ $('.nav-link').on('click', function(){
 
 var subtotal = 0; // track price of all items in cart
 var items = 0; // number of unique products in cart
+var totalItems = 0; // number of total products in cart
 var products = []; // track products in cart (e.g., id, name, quantity, price)
 
 // event handler: when user clicks 'add to cart' button
@@ -46,6 +47,7 @@ $(document).on('click', '.btn-cart', function() {
         // overwrite cart contents if no other items in the cart
         if (items === 0) {
             $('.cart').html(productListing);
+            $('.notify-badge').text(1);
             $('.checkout').html('<button type="submit" class="btn btn-primary">Checkout</button>');
             $('.cart-subtotal').text('Subtotal: $'+subtotal.toFixed(2));
         } else {
@@ -80,9 +82,11 @@ $(document).on('click', '.btn-delete', function() {
     // update cart status to empty if there are no more items in the cart
     // reset subtotal and remove subtotal from page
     if (items === 0) {
+        subtotal = 0;
+        totalItems = 0;
         $('.cart').html('<p>Your shopping cart is currently empty.</p>');
         $('.cart-subtotal').text('');
-        subtotal = 0;
+        $('.notify-badge').text('');
     }
 });
 
@@ -107,10 +111,13 @@ function updateProductQuantity (id, quantity, callback) {
 
 function calcTotals () {
     subtotal = 0;
+    totalItems = 0;
     $.each(products, function(index, obj) {
         var lineItemTotal = (obj.price * obj.quantity).toFixed(2);
         subtotal += parseFloat(lineItemTotal);
+        totalItems += Number(obj.quantity);
         $('#'+obj.id+'>span').text(lineItemTotal);
+        $('.notify-badge').text(totalItems);
     });
     $('.cart-subtotal').text('Subtotal: $'+subtotal.toFixed(2));
 }
