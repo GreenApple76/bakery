@@ -57,10 +57,17 @@ $(document).on('click', '.btn-cart', function() {
 
         items++;
     }
-    
-    
 
-    
+    // inform user their item was added to the cart when user clicks 'add to cart' button
+    $btn.html('<span style="background-color: transparent;" class="btn-fade">&#x2705; Added</span>');
+
+    // let user know they can click the same button to add additional items 
+    setTimeout(function() {
+    $('.btn-fade').fadeOut(1200, function() {
+        $(this).text("Add More");
+    }).fadeIn('fast');
+    $('.btn-cart>.btn-fade').removeClass('btn-fade')
+    }, 750);
 });
 
 // event handler: when user clicks delete item button from cart
